@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+	padding: 0;
+	border: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+	padding: 0;
+	border: 0;
+  text-align: center; 
+  font:300 20px/1.7 'Nunito', sans-serif;
+}
+
+.header__mobile {
+  display: none;
+}
+
+.header {
+  display: flex; 
+  /*justify-content: center;*/ 
+  align-items: center; 
+  height: 450px; 
+  background: url(../images/vyp-header.jpg) no-repeat center top; 
+  background-size: cover;
+}
+
+.header img {
+  margin-top: 25%;
+  margin-right: 20%;
+}
+
+.header h1 {
+  height: 450px; 
+  color:#040405; 
+}
+
+.navbar-container__mobile {
+  display: none;
+}
+
+.nav { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  background: #abcdef; 
+  height: 63px; 
+  background: #0c0e10; 
+  border-bottom: 1px dashed #e6cc10;
+  border-top: 1px dashed #e6cc10;
+}
+
+.nav a { 
+  padding: 0 20px; 
+  color: #fff; 
+  text-decoration: none; 
+  text-transform: uppercase; 
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #e6cc10;
+}
+
+/*QUIENES SOMOS*/
+
+.quienes {
+  padding: 50px 0;
+  background: #020202;
+}
+
+.quienes .title {
+  color: #e6cc10;
+  margin-bottom: 40px; 
+  font: 60px 'Stint Ultra Condensed'; 
+  text-transform: uppercase;
+}
+
+.quienes p {
+  color: white;
+  max-width: 1055px; 
+  margin: 0 auto;
+}
+
+/*TRABAJOS*/
+
+.trabajos {
+  padding: 50px 0;
+  background-color: #0c0e10;
+}
+
+.trabajos .title {
+  color: #e6cc10;
+  margin-bottom: 40px; 
+  font: 50px 'Stint Ultra Condensed';
+  text-transform: uppercase;
+}
+
+.trabajos p {
+  margin-bottom: 40px;
+  color: white;
+}
+
+.list-services {
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.list-services figure { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-flow: column;
+}
+
+#galeria .col-lg-4 {
+  margin: 0 !important;
+  padding: 25px;
+}
+
+#galeria img {
+  width: 100%;
+}
+
+#galeria img:hover {
+  border: 5px solid #0c0e10;
+}
+
+/*TARIFAS*/
+
+.tarifas {
+  padding: 50px 0;
+  background: #020202;
+  background-size: cover;
+}
+
+.tarifas .title {
+  color: #e6cc10;
+  margin-bottom: 40px; 
+  font: 50px 'Stint Ultra Condensed';
+  text-transform: uppercase;
+}
+
+.tarifas .contain {
+  max-width: 1055px; 
+  margin: 0 auto;
+}
+
+.tarifas p {
+  color: white;
+  max-width: 450px;
+}
+
+/*CONTACTO*/
+
+.contacto {
+  padding: 50px 0;
+  background-color: #0c0e10; 
+}
+
+.contacto .title {
+  color: #e6cc10;
+  margin-bottom: 40px; 
+  font: 50px 'Stint Ultra Condensed';
+  text-transform: uppercase;
+}
+
+.social-media {
+  font-size: 50px; 
+}
+
+.social-media__red {
+  color: white;
+}
+
+.social-media a:hover {
+  color: #e6cc10;
+}
+
+.scroll {
+  background-color: #0c0e10;
+  text-decoration: none;
+  bottom: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  text-decoration: none;
+  color: white;
+}
+
+.scroll:hover {
+  bottom: 36px;
+}
+
+.container__scroll > img {
+  width: 15px;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #020202;
+}
+
+footer p {
+  color: #e6cc10;
+  padding: 25px;
+  margin: 0;
+  font-size: 60%;
+}
+
+/***RESPONSIVE***/
+
+@media (max-width: 1000px) {
+  
+  /*HEADER*/
+
+  .header {
+    display: none;
+  }
+
+  .header__mobile {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    height: 180px;
+    width: 180px;
+  }
+
+  /* NAVBAR */
+
+  .container {
+    max-width: initial;
+    padding: 40px 30px;
+    width: 100%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .navbar-container__mobile {
+    display: block;
+    color: #e6cc10;
+    background-color: #0c0e10;
+  }
+
+  .navbar-container__mobile__list__label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-input,
+  .navbar-close {
+    display: none;
+  }
+  
+  .navbar-input:checked ~ .navbar-close {
+    display: block;
+  }
+  
+  .navbar-input:checked ~ .navbar-open {
+    display: none;
+  }
+  
+  .navbar-close,
+  .navbar-open {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .navbar-contet {
+    flex-direction: column;
+    display: none;
+  }
+  
+  .navbar-input:checked ~ .navbar-contet {
+    display: flex;
+  }
+
+  .navbar-contet > a > i {
+    color: #e6cc10;
+    margin-right: 20px;
+  }
+  
+  .navbar-contet > a {
+    text-decoration: none;
+    color: white;
+    height: 32px;
+    margin: 8px 0px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 20px;
+  }
+
+  .navbar-contet > a:hover {
+    color: #e6cc10;
+  }
+
+  .quienes {
+    padding: 30px 0;
+  }
+}
+
+/*-------------------------------------------------------------------*/
